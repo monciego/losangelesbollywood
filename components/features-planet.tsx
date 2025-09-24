@@ -1,189 +1,168 @@
-import Image from "next/image";
-import PlanetImg from "@/public/images/planet.png";
-import PlanetOverlayImg from "@/public/images/planet-overlay.svg";
-import PlanetTagImg01 from "@/public/images/planet-tag-01.png";
-import PlanetTagImg02 from "@/public/images/planet-tag-02.png";
-import PlanetTagImg03 from "@/public/images/planet-tag-03.png";
-import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
+import Image from 'next/image';
+import PlanetImg from '@/public/images/planet.png';
+import PlanetOverlayImg from '@/public/images/planet-overlay.svg';
+
+const services = [
+  {
+    number: '01',
+    name: 'LA BOLLYWOOD PACKAGE',
+    image: '/images/services/la-bollywood-package.jpg',
+    description:
+      'As our most requested show, our L.A. Bollywood package is perfect for weddings, Sangeets, and cultural events. Looking to add some Bollywood flair to your event? Look no further! Our talented dancers will dazzle you with the latest hits from your favorite films, bringing the best of Bollywood cinema right to your doorstep.',
+  },
+  {
+    number: '02',
+    name: 'DIWALI  PACKAGE',
+    image: '/images/services/diwali-package.png',
+    description:
+      'Celebrate the festival of lights with us and experience the magic of Diwali, our vibrant and energetic Bollywood dance performances, live music, and cultural activities. We love sharing our light and love of Indian music and culture with you.',
+  },
+  {
+    number: '03',
+    name: 'HOLI PACKAGE',
+    image: '/images/services/holi-package.png',
+    description:
+      'Add some color and fun celebration to your Holi event with our professional Bollywood dancers! Our Holi Show is just as colorful as the festival itself, bringing joy and excitement to your guests.',
+  },
+  {
+    number: '04',
+    name: 'BHANGRA FUSION  PACKAGE',
+    image: '/images/services/bhangra-fusion-package.jpg',
+    description:
+      'Our Bhangra Fusion Show is a one-of-a-kind experience that blends genres and cultures to create an upbeat performance perfect for any event. Get ready to dance and be entertained by our talented performers!',
+  },
+  {
+    number: '05',
+    name: 'BELLYDANCE FUSION PACKAGE',
+    image: '/images/services/bellydance-fusion-package.png',
+    description:
+      'Our widely popular Bellydance show seamlessly fuses the sensuality and elegance of the Middle East with the vibrancy of Bollywood. If you want a little of both, this mesmerizing fusion show will surely captivate your guests!',
+  },
+  {
+    number: '06',
+    name: 'MIXED CULTURE  PACKAGE',
+    image: '/images/services/mixed-culture-package.jpg',
+    description:
+      'Are you a multi-ethnic wedding couple and want something special to celebrate all of your cultures? Or maybe you want a variety show that just has it all!  This show is the perfect addition to any mixed culture event. We incorporate a variety of dance styles according to your requests! Fusion shows we’ve done in the past include Persian, Indian, Arab, Polynesian, Latin, Brazilian, and Fire. Fusion shows create a truly unique and memorable experience to honor all of your guests!',
+  },
+  {
+    number: '07',
+    name: 'AFTER HOURS PACKAGE',
+    image: '/images/services/after-hours-package.jpg',
+    description:
+      'Tired of the same old typical Bollywood Show and want something different? If you’re looking for a NOT SO family friendly show, look no further! Our After Hours Show explores the adult side of Bollywood which includes Cabaret, Mujra, Burlesque and more playful elements meant to excite and titillate!',
+  },
+  {
+    number: '08',
+    name: 'FIRE!',
+    image: '/images/services/fire.png',
+    description:
+      'Ready to light things up? Our Bollywood Fire Add On service is perfect for those who are truly ready to impress their guests. Our fire dancers perform to your favorite Bollywood hits, all while dancing with fire!',
+  },
+  {
+    number: '09',
+    name: 'DHOL PLAYER ',
+    image: '/images/services/dhol-player.png',
+    description:
+      "Looking to add some excitement to your event? Our talented dhol players are ready to bring the beats! Whether it's a wedding, cultural event, or bharat, our dhol players are some of the best in the country. Call us today to book your live music experience!",
+  },
+  {
+    number: '10',
+    name: 'GARLAND GREETINGS',
+    image: '/images/services/garland-greetings.png',
+    description:
+      'Make a stunning first impression at your event by greeting your guests with fresh flower garlands! Ask us about our jasmine or marigold flower garlands to add a touch of and beauty to your special occasion.',
+  },
+  {
+    number: '11',
+    name: 'BHARAT CROWD HYPE!',
+    image: '/images/services/bharat-crowd-hype.png',
+    description:
+      "We know that indian weddings can start early, and sometimes the chai hasn't kicked in! Not to worry because our dancers and dhol players will help kick off the party, no matter what time your bharat begins!",
+  },
+  {
+    number: '12',
+    name: 'SITAR PLAYER',
+    image: '/images/services/sitar-player.png',
+    description:
+      'Add a touch of class and elegance to your event with a professional sitar player. Serenade your guests with the authentic sounds of an Indian sitar, creating a mesmerizing ambiance that will leave your guests amazed.',
+  },
+];
 
 export default function FeaturesPlanet() {
   return (
-    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+    <section id='learn-more' className='relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900'>
+      <div className='mx-auto max-w-6xl px-4 sm:px-6'>
+        <div className='py-12 md:py-20'>
           {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
-            <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
-              Simple helps your teams work more efficiently together
+          <div className='mx-auto max-w-3xl pb-16 text-center md:pb-20'>
+            <h2 className='text-3xl font-bold text-gray-200 md:text-4xl'>
+              We're not your average Dance Company and we love keeping things
+              interesting!
             </h2>
           </div>
+
           {/* Planet */}
-          <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
-            <div className="text-center">
-              <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-linear-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,var(--color-blue-500),transparent)]">
+          <div className='pb-16 md:pb-20' data-aos='zoom-y-out'>
+            <div className='text-center'>
+              <div className='relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-linear-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,var(--color-blue-500),transparent)]'>
                 <Image
-                  className="rounded-full bg-gray-900"
+                  className='rounded-full bg-gray-900'
                   src={PlanetImg}
                   width={400}
                   height={400}
-                  alt="Planet"
+                  alt='Planet'
                 />
-                <div className="pointer-events-none" aria-hidden="true">
+
+                {/* Overlay decoration */}
+                <div className='pointer-events-none' aria-hidden='true'>
                   <Image
-                    className="absolute -right-64 -top-20 z-10 max-w-none"
+                    className='absolute -right-64 -top-20 z-10 max-w-none'
                     src={PlanetOverlayImg}
                     width={789}
                     height={755}
-                    alt="Planet decoration"
+                    alt='Planet decoration'
                   />
-                  <div>
-                    <Image
-                      className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg01}
-                      width={253}
-                      height={56}
-                      alt="Tag 01"
-                    />
-                    <Image
-                      className="absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-30 transition-opacity duration-500"
-                      src={PlanetTagImg02}
-                      width={241}
-                      height={56}
-                      alt="Tag 02"
-                    />
-                    <Image
-                      className="absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-25 transition-opacity duration-500"
-                      src={PlanetTagImg03}
-                      width={243}
-                      height={56}
-                      alt="Tag 03"
-                    />
-                    <Image
-                      className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg04}
-                      width={251}
-                      height={56}
-                      alt="Tag 04"
-                    />
+
+                  {/* Floating text tags */}
+                  <div className='absolute -left-28 top-16 z-10 flex items-center justify-center p-2 w-[200px] h-[48px] rounded-md bg-gray-700/70 text-white text-sm font-medium animate-[float_4s_ease-in-out_infinite_both] opacity-70 transition-opacity duration-500 shadow-lg backdrop-blur-md'>
+                    Global Reach
+                  </div>
+                  <div className='absolute left-56 top-7 z-10 flex items-center justify-center p-2 w-[200px] h-[48px] rounded-md bg-indigo-700/70 text-white text-sm font-medium animate-[float_4s_ease-in-out_infinite_1s_both] opacity-70 transition-opacity duration-500 shadow-lg backdrop-blur-md'>
+                    Cultural Fusion
+                  </div>
+                  <div className='absolute -left-20 bottom-24 z-10 flex items-center justify-center p-2 w-[200px] h-[48px] rounded-md bg-emerald-700/70 text-white text-sm font-medium animate-[float_4s_ease-in-out_infinite_2s_both] opacity-70 transition-opacity duration-500 shadow-lg backdrop-blur-md'>
+                    Profesional Performers
+                  </div>
+                  <div className='absolute bottom-32 left-64 z-10 flex items-center justify-center p-2 w-[200px] h-[48px] rounded-md bg-pink-700/70 text-white text-sm font-medium animate-[float_4s_ease-in-out_infinite_3s_both] opacity-70 transition-opacity duration-500 shadow-lg backdrop-blur-md'>
+                    Customizable Shows
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {/* Grid */}
-          <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 *:relative *:p-6 *:before:absolute *:before:bg-gray-800 *:before:[block-size:100vh] *:before:[inline-size:1px] *:before:[inset-block-start:0] *:before:[inset-inline-start:-1px] *:after:absolute *:after:bg-gray-800 *:after:[block-size:1px] *:after:[inline-size:100vw] *:after:[inset-block-start:-1px] *:after:[inset-inline-start:0] md:*:p-10">
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm2-4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4Zm1 10a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H5Z" />
-                </svg>
-                <span>Instant Analytics</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M14.29 2.614a1 1 0 0 0-1.58-1.228L6.407 9.492l-3.199-3.2a1 1 0 1 0-1.414 1.415l4 4a1 1 0 0 0 1.496-.093l7-9ZM1 14a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H1Z" />
-                </svg>
-                <span>Metadata</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path
-                    d="M2.248 6.285a1 1 0 0 1-1.916-.57A8.014 8.014 0 0 1 5.715.332a1 1 0 0 1 .57 1.916 6.014 6.014 0 0 0-4.037 4.037Z"
-                    opacity=".3"
+
+          {/* Grid for services */}
+          <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+            {services.map((service) => (
+              <div
+                key={service.number}
+                className='relative bg-gray-800/60 rounded-xl p-6 shadow-lg transition hover:shadow-xl'
+              >
+                <div className='relative w-full h-40 mb-4'>
+                  <Image
+                    src={service.image}
+                    alt={service.name}
+                    fill
+                    className='object-cover rounded-lg'
                   />
-                  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm1.715-6.752a1 1 0 0 1 .57-1.916 8.014 8.014 0 0 1 5.383 5.383 1 1 0 1 1-1.916.57 6.014 6.014 0 0 0-4.037-4.037Zm4.037 7.467a1 1 0 1 1 1.916.57 8.014 8.014 0 0 1-5.383 5.383 1 1 0 1 1-.57-1.916 6.014 6.014 0 0 0 4.037-4.037Zm-7.467 4.037a1 1 0 1 1-.57 1.916 8.014 8.014 0 0 1-5.383-5.383 1 1 0 1 1 1.916-.57 6.014 6.014 0 0 0 4.037 4.037Z" />
-                </svg>
-                <span>SEO &amp; Performance</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M8 0a1 1 0 0 1 1 1v14a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Zm6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1a1 1 0 1 1 0 2h-1a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h1a1 1 0 1 1 0 2h-1ZM1 1a1 1 0 0 0 0 2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 1 0 0 2h1a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H1Z" />
-                </svg>
-                <span>Custom Code</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M10.284.33a1 1 0 1 0-.574 1.917 6.049 6.049 0 0 1 2.417 1.395A1 1 0 0 0 13.5 2.188 8.034 8.034 0 0 0 10.284.33ZM6.288 2.248A1 1 0 0 0 5.718.33 8.036 8.036 0 0 0 2.5 2.187a1 1 0 0 0 1.372 1.455 6.036 6.036 0 0 1 2.415-1.395ZM1.42 5.401a1 1 0 0 1 .742 1.204 6.025 6.025 0 0 0 0 2.79 1 1 0 0 1-1.946.462 8.026 8.026 0 0 1 0-3.714A1 1 0 0 1 1.421 5.4Zm2.452 6.957A1 1 0 0 0 2.5 13.812a8.036 8.036 0 0 0 3.216 1.857 1 1 0 0 0 .574-1.916 6.044 6.044 0 0 1-2.417-1.395Zm9.668.04a1 1 0 0 1-.041 1.414 8.033 8.033 0 0 1-3.217 1.857 1 1 0 1 1-.571-1.917 6.035 6.035 0 0 0 2.415-1.395 1 1 0 0 1 1.414.042Zm2.242-6.255a1 1 0 1 0-1.946.462 6.03 6.03 0 0 1 0 2.79 1 1 0 1 0 1.946.462 8.022 8.022 0 0 0 0-3.714Z" />
-                </svg>
-                <span>Localization</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M9 1a1 1 0 1 0-2 0v6a1 1 0 0 0 2 0V1ZM4.572 3.08a1 1 0 0 0-1.144-1.64A7.987 7.987 0 0 0 0 8a8 8 0 0 0 16 0c0-2.72-1.36-5.117-3.428-6.56a1 1 0 1 0-1.144 1.64A5.987 5.987 0 0 1 14 8 6 6 0 1 1 2 8a5.987 5.987 0 0 1 2.572-4.92Z" />
-                </svg>
-                <span>Canonical URL</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
-              </p>
-            </article>
+                </div>
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  {service.number}. {service.name}
+                </h3>
+                <p className='text-gray-300 text-sm'>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
